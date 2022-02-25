@@ -1,0 +1,33 @@
+type Query {
+
+    customers: [Customer]!
+    paginatedCustomers(count:Int, offset:Int): [Customer]
+}
+
+type Customer {
+
+    customerId: Int
+    storeId: Int
+    firstName : String
+    lastName: String
+    email: String
+    addressId: Int
+    active: Int
+
+    ##address:[Address]!
+
+
+}
+
+
+type Address {
+    addressId: Int
+    address: String
+    address2: String
+    district: String
+    cityId: Int
+    postalCode: String
+    phone: String
+
+
+}
